@@ -1,19 +1,16 @@
-###set path
-setwd("C:\\Users\\a0123862\\Desktop\\simulation codes\\Testing power")
-
 POWER_CALCULATION <- function(model, n,coef)
 {
 library(HHG)
 library(minerva)
 library(energy)
-library(mJMI)
+library(JMI)
 library(foreach)
 library(doSNOW)
 cL <- makeCluster(60, type="SOCK")
 registerDoSNOW(cL)
 
 ITER = 1000;
-BB = foreach(iter = 1:ITER,.packages=c("HHG","minerva","energy","mJMI"), .combine = "cbind") %dopar%
+BB = foreach(iter = 1:ITER,.packages=c("HHG","minerva","energy","JMI"), .combine = "cbind") %dopar%
 #for(iter in 1:ITER) 
 {
 

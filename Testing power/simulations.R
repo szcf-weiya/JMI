@@ -1,5 +1,3 @@
-setwd("C:\\Users\\a0123862\\Desktop\\simulation codes\\Testing power")
-
 
 source("power_calculation.R")
 
@@ -34,9 +32,9 @@ print(OUT)
 save(OUT, file='result')
 
 
-library(R.matlab)
+# library(R.matlab)
 
-writeMat('result.mat', OUT = OUT)
+# writeMat('result.mat', OUT = OUT)
 
 
 
